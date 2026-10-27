@@ -1,12 +1,165 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-bs-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Clone</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Build responsive websites faster with Bootstrap, a powerful front-end toolkit.">
+    <title>Bootstrap · Build fast, responsive sites</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Bootstrap Clone</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark site-navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="#home" aria-label="Bootstrap home">
+                <span class="brand-mark" aria-hidden="true">B</span>
+                <span>Bootstrap</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="siteNavigation">
+                <ul class="navbar-nav me-auto ms-lg-4 mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#get-started">Get started</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a class="nav-icon" href="https://github.com/twbs/bootstrap" aria-label="Bootstrap on GitHub">
+                        <i class="bi bi-github" aria-hidden="true"></i>
+                    </a>
+                    <div class="vr d-none d-lg-block text-white opacity-50"></div>
+                    <div class="dropdown">
+                        <button class="btn btn-sm nav-version dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            v5.3
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><span class="dropdown-header">Latest release</span></li>
+                            <li><a class="dropdown-item active" href="#get-started">v5.3</a></li>
+                            <li><a class="dropdown-item" href="#get-started">All versions</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn theme-toggle" type="button" id="themeToggle" aria-label="Switch to dark theme" title="Toggle theme">
+                        <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-section" id="home">
+            <div class="container py-5">
+                <div class="row align-items-center g-5 py-lg-5">
+                    <div class="col-lg-7">
+                        <div class="hero-copy">
+                            <span class="release-label"><span class="release-dot"></span> Bootstrap 5.3</span>
+                            <h1 class="display-2 fw-semibold mt-4">Build fast, responsive sites with <span>Bootstrap.</span></h1>
+                            <p class="lead mt-4">Create beautiful, mobile-first websites with a flexible grid, ready-to-use components, and powerful JavaScript plugins.</p>
+                            <div class="d-flex flex-wrap gap-3 mt-4">
+                                <a class="btn btn-primary btn-lg px-4" href="#get-started">Get started</a>
+                                <a class="btn btn-outline-secondary btn-lg px-4" href="#features">Explore the features</a>
+                            </div>
+                            <p class="small text-body-secondary mt-4 mb-0">Currently v5.3.3 · <a href="https://github.com/twbs/bootstrap/releases" class="link-secondary">Read the release notes</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="code-window" aria-label="Example Bootstrap button markup">
+                            <div class="code-window-bar">
+                                <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                                <span>index.html</span>
+                                <i class="bi bi-copy" aria-hidden="true"></i>
+                            </div>
+                            <pre class="code-sample mb-0"><code><span class="code-muted">&lt;!-- Build something great --&gt;</span>
+<span class="code-pink">&lt;div</span> <span class="code-blue">class</span>=<span class="code-green">"container"</span><span class="code-pink">&gt;</span>
+  <span class="code-pink">&lt;button</span>
+    <span class="code-blue">class</span>=<span class="code-green">"btn btn-primary"</span>
+    <span class="code-blue">type</span>=<span class="code-green">"button"</span><span class="code-pink">&gt;</span>
+    Get started
+  <span class="code-pink">&lt;/button&gt;</span>
+<span class="code-pink">&lt;/div&gt;</span></code></pre>
+                            <div class="code-window-footer"><span class="status-pulse"></span> Responsive by design</div>
+                        </div>
+                        <div class="hero-decoration" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-section py-5" id="features">
+            <div class="container py-lg-5">
+                <div class="section-heading mb-5">
+                    <span class="eyebrow">A toolkit that works for you</span>
+                    <h2 class="display-6 fw-semibold mt-2">Everything you need to get started</h2>
+                    <p class="text-body-secondary mb-0">A dependable foundation for projects of every size.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <article class="feature-card h-100">
+                            <div class="feature-icon"><i class="bi bi-phone" aria-hidden="true"></i></div>
+                            <h3 class="h5 fw-semibold">Responsive grid</h3>
+                            <p class="text-body-secondary mb-0">Build layouts that adapt smoothly from small screens to wide displays with a flexible grid system.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="feature-card h-100">
+                            <div class="feature-icon"><i class="bi bi-boxes" aria-hidden="true"></i></div>
+                            <h3 class="h5 fw-semibold">Ready-made components</h3>
+                            <p class="text-body-secondary mb-0">Bring pages to life with accessible buttons, navigation, cards, and other practical UI building blocks.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="feature-card h-100">
+                            <div class="feature-icon"><i class="bi bi-sliders" aria-hidden="true"></i></div>
+                            <h3 class="h5 fw-semibold">Easy to customize</h3>
+                            <p class="text-body-secondary mb-0">Make the toolkit your own with utility classes, design tokens, and a consistent set of styles.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="start-section py-5" id="get-started">
+            <div class="container py-lg-4">
+                <div class="start-panel p-4 p-md-5">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-8">
+                            <span class="eyebrow">Start building today</span>
+                            <h2 class="h2 fw-semibold mt-2">Get Bootstrap in your project</h2>
+                            <p class="text-body-secondary mb-lg-0">Add the compiled CSS and JavaScript from a CDN, then start building with Bootstrap components.</p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end">
+                            <a class="btn btn-primary btn-lg px-4" href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Read the documentation <i class="bi bi-arrow-up-right ms-1" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer py-4">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3">
+            <a class="footer-brand d-flex align-items-center gap-2" href="#home">
+                <span class="brand-mark brand-mark-small" aria-hidden="true">B</span>
+                <span>Bootstrap Clone</span>
+            </a>
+            <p class="small text-body-secondary mb-0">Designed to make your next project a little easier.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const themeToggle = document.querySelector("#themeToggle");
+        const themeIcon = themeToggle.querySelector("i");
+
+        themeToggle.addEventListener("click", () => {
+            const isDark = document.documentElement.getAttribute("data-bs-theme") === "dark";
+            document.documentElement.setAttribute("data-bs-theme", isDark ? "light" : "dark");
+            themeIcon.className = isDark ? "bi bi-moon-stars-fill" : "bi bi-sun-fill";
+            themeToggle.setAttribute("aria-label", isDark ? "Switch to dark theme" : "Switch to light theme");
+        });
+    </script>
 </body>
 </html>
